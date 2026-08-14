@@ -29193,7 +29193,7 @@ function run() {
     const s3Uri = `s3://${bucket}`;
     exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
 
-    const websiteUrl = `HTTP://${bucket}.s3-website-${bucketRegion}.amazonaws.com`;
+    const websiteUrl = `HTTP://${bucket}.s3-website.${bucketRegion}.amazonaws.com`;
     setOutput('website-url',websiteUrl);
 }
 
